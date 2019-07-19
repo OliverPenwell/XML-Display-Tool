@@ -26,15 +26,19 @@ namespace XML_Display_Tool
             {
                 openFileDialog1.ShowDialog();
                 FilePath = openFileDialog1.FileName;
-                var allTheTextOfFile = File.ReadAllText(FilePath);
                 textBox1.Text = string.Format(FilePath);
-                XmlDocument file1 = new XmlDocument();
-                StringWriter neat = new StringWriter();
-                file1.LoadXml(allTheTextOfFile);
-                file1.Save(neat);
-                String nicelyFormatted = neat.ToString();
-                textBox2.Text = nicelyFormatted;
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            var allTheTextOfFile = File.ReadAllText(FilePath);
+            XmlDocument file1 = new XmlDocument();
+            StringWriter neat = new StringWriter();
+            file1.LoadXml(allTheTextOfFile);
+            file1.Save(neat);
+            String nicelyFormatted = neat.ToString();
+            textBox2.Text = nicelyFormatted;
         }
     }
 }
