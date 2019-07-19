@@ -26,10 +26,10 @@ namespace XML_Display_Tool
             {
                 openFileDialog1.ShowDialog();
                 FilePath = openFileDialog1.FileName;
-               
                 textBox1.Text = string.Format(FilePath);
             }
         }
+
         private void Button2_Click(object sender, EventArgs e)
         {
             var allTheTextOfFile = File.ReadAllText(FilePath);
