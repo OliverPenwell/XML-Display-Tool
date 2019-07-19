@@ -55,7 +55,9 @@
             // 
             // openFileDialog1
             // 
+            this.openFileDialog1.DefaultExt = "\"xml\"";
             this.openFileDialog1.Filter = "\"XML files|*.xml\"";
+            this.openFileDialog1.FilterIndex = 2;
             this.openFileDialog1.InitialDirectory = "\"C:\\\"";
             this.openFileDialog1.Title = "\"Select an XML file.\"";
             // 
