@@ -61,15 +61,15 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 97);
+            this.textBox2.Location = new System.Drawing.Point(12, 94);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(776, 349);
+            this.textBox2.Size = new System.Drawing.Size(776, 352);
             this.textBox2.TabIndex = 3;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 51);
+            this.button2.Location = new System.Drawing.Point(12, 48);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(776, 40);
             this.button2.TabIndex = 4;
