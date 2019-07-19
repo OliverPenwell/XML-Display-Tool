@@ -32,13 +32,21 @@ namespace XML_Display_Tool
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            var allTheTextOfFile = File.ReadAllText(FilePath);
-            XmlDocument file1 = new XmlDocument();
-            StringWriter neat = new StringWriter();
-            file1.LoadXml(allTheTextOfFile);
-            file1.Save(neat);
-            String nicelyFormatted = neat.ToString();
-            textBox2.Text = nicelyFormatted;
+            try
+            {
+                var allTheTextOfFile = File.ReadAllText(FilePath);
+                XmlDocument file1 = new XmlDocument();
+                StringWriter neat = new StringWriter();
+                file1.LoadXml(allTheTextOfFile);
+                file1.Save(neat);
+                String nicelyFormatted = neat.ToString();
+                textBox2.Text = nicelyFormatted;
+            }
+            catch
+            {
+                //Here we can add in a message box to warn the user
+                MessageBox.Show("Looks like something went wrong. Make sure a valid XML (.xml) file is selected.");
+            }
         }
     }
 }
